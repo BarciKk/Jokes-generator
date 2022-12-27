@@ -87,11 +87,14 @@ const DataFetching = ({ joke, setJoke }: DupaDupa) => {
         {isError && <h1>Error</h1>}
         {!isLoading && (
           <button
-            className="next-joke"
+            className="next-joke-button"
             onClick={fetchData}
             disabled={!isAllowedRequest}
           >
-            Next Joke
+            <span className="circle">
+              <span className="arrow"></span>
+            </span>
+            <span className="text">Next Joke</span>
           </button>
         )}
       </div>
