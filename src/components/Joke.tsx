@@ -1,9 +1,9 @@
-import { IJokeProps } from "./types";
+import { IJokeProps } from "../../types/types";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import {
   FavJokesWrapper,
   iconStyles,
-} from "./styledComponents/StyledComponents";
+} from "../styledComponents/StyledComponents";
 import "animate.css";
 
 export const Joke = ({

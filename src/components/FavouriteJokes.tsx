@@ -1,7 +1,7 @@
 import { Joke } from "./Joke";
 import { useContext } from "react";
-import { JokesAndLikeHanlder } from "./App";
-import { JokeContext, Title } from "./styledComponents/StyledComponents";
+import { JokesAndLikeHanlder } from "../App";
+import { JokeContext, Title } from "../styledComponents/StyledComponents";
 import { motion as m } from "framer-motion";
 
 export const FavouriteJokes = () => {

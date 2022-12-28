@@ -1,21 +1,22 @@
 import { useEffect, useState, useCallback, useRef, useContext } from "react";
 import Lottie from "react-lottie";
-import * as loadingIconAnimationData from "./icons/loadingIcon.json";
-import { DupaDupa, HandleToggleLike } from "./types";
-import { getJoke } from "./service/server";
+import * as loadingIconAnimationData from "../icons/loadingIcon.json";
+import { IDataFetchingProps, HandleToggleLike } from "../../types/types";
+import { getJoke } from "../service/server";
 import { Link } from "react-router-dom";
 import { Joke } from "./Joke";
-import { JokesAndLikeHanlder } from "./App";
+import { JokesAndLikeHanlder } from "../App";
 import { motion as m } from "framer-motion";
 
-import { SingleJoke } from "./styledComponents/StyledComponents";
+import { SingleJoke } from "../styledComponents/StyledComponents";
 
-const DataFetching = ({ joke, setJoke }: DupaDupa) => {
+const DataFetching = ({ joke, setJoke }: IDataFetchingProps) => {
   const [isError, setIsError] = useState(false);
   const [isAllowedRequest, setIsAllowedRequest] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const context = useContext(JokesAndLikeHanlder);
 
+  //used for loading animation
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -33,8 +34,7 @@ const DataFetching = ({ joke, setJoke }: DupaDupa) => {
 
     try {
       const data = await getJoke();
-      if (data.error || !data.setup || !data.delivery) throw new Error();
-
+      if (data.error || !data.setup || !data.delivery) throw new Error(); //this is error handler (it won't be here because all the jokes have data.setup and data.delivery)
       setJoke(data);
 
       userJokeRequest.current += 1;

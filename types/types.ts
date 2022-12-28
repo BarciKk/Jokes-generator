@@ -22,11 +22,7 @@ export type HandleToggleLike = (
   isLiked: boolean
 ) => void;
 
-interface dupa {
-  likedJoke: IJoke[];
-  handleToggleLike: HandleToggleLike;
-}
-interface DupaDupa {
+interface IDataFetchingProps {
   joke: IJoke | undefined;
   setJoke: React.Dispatch<React.SetStateAction<IJoke | undefined>>;
 }
@@ -35,4 +31,4 @@ export type IJokeProps = Pick<IJoke, "id" | "setup" | "delivery"> & {
   likedJokes: IJoke[];
   handleToggleLike: HandleToggleLike;
 };
-export type { IJoke, dupa, DupaDupa };
+export type { IJoke, IDataFetchingProps };

@@ -1,8 +1,8 @@
-import DataFetching from "./DataFetching";
+import DataFetching from "./components/DataFetching";
 import { Routes, Route } from "react-router-dom";
-import { FavouriteJokes } from "./FavouriteJokes";
+import { FavouriteJokes } from "./components/FavouriteJokes";
 import { useState } from "react";
-import { IJoke, HandleToggleLike } from "./types";
+import { IJoke, HandleToggleLike } from "../types/types";
 import { createContext } from "react";
 import { AnimatePresence } from "framer-motion";
 
