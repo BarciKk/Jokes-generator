@@ -1,10 +1,7 @@
 import { IJokeProps } from "../../types/types";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
-import {
-  FavJokesWrapper,
-  iconStyles,
-} from "../styledComponents/StyledComponents";
 import "animate.css";
+import { Box, Flex, Stack, Text } from "@mantine/core";
 
 export const Joke = ({
   id,
@@ -16,14 +13,25 @@ export const Joke = ({
   const isLiked = likedJokes.some((joke) => joke.id === id);
 
   return (
-    <FavJokesWrapper>
-      <p>{setup}</p>
-      <p>{delivery}</p>
-      <ThumbUpAltIcon
-        style={iconStyles}
-        className={`likeButton ${isLiked ? "liked" : "disLike"}`}
-        onClick={() => handleToggleLike(id, isLiked)}
-      />
-    </FavJokesWrapper>
+    <Stack sx={{ padding: "20px" }}>
+      <Box sx={{ paddingBottom: "10px" }}>
+        <Text>{setup}</Text>
+      </Box>
+      <Text>{delivery}</Text>
+      <Flex
+        justify="flex-end"
+        sx={{
+          cursor: "pointer",
+          margin: "10px",
+          color: "gray",
+        }}
+      >
+        <ThumbUpAltIcon
+          fontSize="large"
+          className={`likeButton ${isLiked ? "liked" : "disLike"}`}
+          onClick={() => handleToggleLike(id, isLiked)}
+        />
+      </Flex>
+    </Stack>
   );
 };
