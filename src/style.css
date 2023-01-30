@@ -1,0 +1,146 @@
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='3840' height='2160' preserveAspectRatio='none' viewBox='0 0 3840 2160'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1143%26quot%3b)' fill='none'%3e%3crect width='3840' height='2160' x='0' y='0' fill='rgba(9%2c 15%2c 22%2c 1)'%3e%3c/rect%3e%3cpath d='M3840 0L2021.8 0L3840 452.68z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M2021.8 0L3840 452.68L3840 965.02L1714.76 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1714.7599999999998 0L3840 965.02L3840 1406.05L1562.1699999999998 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M1562.1699999999996 0L3840 1406.05L3840 1776.27L753.6699999999996 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 2160L434.05 2160L0 2035.07z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 2035.07L434.05 2160L516 2160L0 1108.4699999999998z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 1108.47L516 2160L1343.55 2160L0 428.28z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 428.28L1343.55 2160L1867.23 2160L0 157.27999999999997z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1143'%3e%3crect width='3840' height='2160' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  font-family: "Hahmlet", serif;
+}
+.container {
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 90vh;
+  place-items: center;
+}
+ul {
+  list-style: none;
+}
+.likeButton {
+  animation: bounce;
+  animation-duration: 2s;
+  color: grey;
+  font-size: 48px;
+  cursor: pointer;
+  margin: 10px;
+  align-self: flex-end;
+}
+
+.next-joke-wrapper,
+.fav-jokes-link {
+  height: 40%;
+}
+
+.fav {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.liked {
+  color: rgb(74, 74, 163);
+}
+.disLike {
+  color: grey;
+}
+.next-joke-button {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 70px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background: #fff;
+  z-index: 1;
+}
+.circle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgb(74, 74, 163);
+  border-radius: 50px;
+  left: 0;
+  top: -1px;
+  z-index: 2;
+  transition: 0.5s cubic-bezier(1, 0, 0.8, 1);
+}
+
+.next-joke-button:hover .circle {
+  width: 300px;
+}
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  top: 25px;
+  left: 30px;
+  transition: 0.5s;
+}
+.next-joke-button:hover .arrow {
+  left: 60px;
+}
+
+.arrow:before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(-45deg);
+  left: -9px;
+  top: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.next-joke-button:hover .arrow:before {
+  opacity: 1;
+}
+.text {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+  font-size: 22px;
+  line-height: 100px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  z-index: 3;
+  font-weight: 600;
+}
+
+.next-joke-button:hover .text {
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 17px;
+  }
+  .container {
+    height: 85vh;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 3rem;
+  }
+  .next-joke-button {
+    width: 300px;
+    height: 70px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 19px;
+  }
+  .container {
+    height: 85vh;
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 3rem;
+  }
+  .likeButton {
+    position: relative;
+    bottom: 2.5rem;
+  }
+}
