@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef, useContext } from "react";
-import Lottie from "react-lottie";
-import * as loadingIconAnimationData from "../icons/loadingIcon.json";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { Text, Button, Loader, Title, Stack, MediaQuery } from "@mantine/core";
 import { IDataFetchingProps, HandleToggleLike } from "../../types/types";
 import { getJoke } from "../service/server";
 import { Link } from "react-router-dom";
@@ -8,28 +8,16 @@ import { Joke } from "./Joke";
 import { JokesAndLikeHanlder } from "../App";
 import { motion as m } from "framer-motion";
 
-import { SingleJoke } from "../styledComponents/StyledComponents";
-
 const DataFetching = ({ joke, setJoke }: IDataFetchingProps) => {
   const [isError, setIsError] = useState(false);
   const [isAllowedRequest, setIsAllowedRequest] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const context = useContext(JokesAndLikeHanlder);
 
-  //used for loading animation
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: loadingIconAnimationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   const userJokeRequest = useRef(0);
   const fetchData = useCallback(async () => {
     setIsError(false);
-    setIsLoading(true); //przed samym fetchem ustawiam na true
+    setIsLoading(true);
     if (!isAllowedRequest) return;
 
     try {
@@ -42,7 +30,7 @@ const DataFetching = ({ joke, setJoke }: IDataFetchingProps) => {
       setIsError(true);
     } finally {
       setIsAllowedRequest(false);
-      setIsLoading(false); //jesli fetch przejdzie to ustawiam na false
+      setIsLoading(false);
     }
   }, [setJoke]);
 
@@ -65,39 +53,50 @@ const DataFetching = ({ joke, setJoke }: IDataFetchingProps) => {
       transition={{ duration: 0.9 }}
       className="container"
     >
-      <div className="fav-jokes-link">
-        <Link to="/favourite-jokes">Favourite </Link>
-      </div>
+      <Link to="/favourite-jokes">Favourite </Link>
+      <Stack align="center">
+        <MediaQuery
+          largerThan={250}
+          styles={{
+            fontSize: 20,
+            width: "auto",
+          }}
+        >
+          <Stack
+            ta="center"
+            sx={{
+              background: "white",
+              borderRadius: "1rem",
+            }}
+          >
+            {!isError && joke && !isLoading && (
+              <Joke
+                id={joke.id}
+                setup={joke.setup}
+                delivery={joke.delivery}
+                handleToggleLike={context?.handleToggleLike as HandleToggleLike}
+                likedJokes={context?.likeJoke ?? []}
+              />
+            )}
+          </Stack>
+        </MediaQuery>
+        {isLoading && <Loader variant="dots" size="xl" color="violet" />}
+      </Stack>
 
-      <SingleJoke>
-        {!isError && joke && !isLoading && (
-          <Joke
-            id={joke.id}
-            setup={joke.setup}
-            delivery={joke.delivery}
-            handleToggleLike={context?.handleToggleLike as HandleToggleLike}
-            likedJokes={context?.likeJoke ?? []}
-          />
-        )}
-        {isLoading && (
-          <Lottie options={defaultOptions} height={120} width={120}></Lottie>
-        )}{" "}
-      </SingleJoke>
-      <div className="next-joke-wrapper">
-        {isError && <h1>Error</h1>}
+      <Stack>
+        {isError && <Title order={1}>Error</Title>}
         {!isLoading && (
-          <button
-            className="next-joke-button"
+          <Button
+            color="violet"
+            rightIcon={<KeyboardDoubleArrowRightIcon />}
             onClick={fetchData}
             disabled={!isAllowedRequest}
+            size="lg"
           >
-            <span className="circle">
-              <span className="arrow"></span>
-            </span>
-            <span className="text">Next Joke</span>
-          </button>
+            <Text>Next jokie</Text>
+          </Button>
         )}
-      </div>
+      </Stack>
     </m.div>
   );
 };

@@ -1,4 +1,5 @@
 import DataFetching from "./components/DataFetching";
+import { MantineProvider } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
 import { FavouriteJokes } from "./components/FavouriteJokes";
 import { useState } from "react";
@@ -18,10 +19,8 @@ function App() {
   const handleToggleLike = (targetedJokeId: IJoke["id"], isLiked: boolean) => {
     if (joke && !isLiked) {
       setLikeJoke([...likeJoke, joke]);
-
       return;
     }
-
     if (isLiked) {
       setLikeJoke(
         likeJoke.filter((likedJoke) => likedJoke.id !== targetedJokeId)
@@ -30,17 +29,19 @@ function App() {
   };
 
   return (
-    <AnimatePresence>
-      <JokesAndLikeHanlder.Provider value={{ likeJoke, handleToggleLike }}>
-        <Routes>
-          <Route
-            path="/"
-            element={<DataFetching joke={joke} setJoke={setJoke} />}
-          />
-          <Route path="/favourite-jokes" element={<FavouriteJokes />} />
-        </Routes>
-      </JokesAndLikeHanlder.Provider>
-    </AnimatePresence>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <AnimatePresence>
+        <JokesAndLikeHanlder.Provider value={{ likeJoke, handleToggleLike }}>
+          <Routes>
+            <Route
+              path="/"
+              element={<DataFetching joke={joke} setJoke={setJoke} />}
+            />
+            <Route path="/favourite-jokes" element={<FavouriteJokes />} />
+          </Routes>
+        </JokesAndLikeHanlder.Provider>
+      </AnimatePresence>
+    </MantineProvider>
   );
 }
 
