@@ -1,0 +1,436 @@
+{
+  "data": [
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Why are men like lawnmowers?",
+      "delivery": "They are very hard to get started, they make yucky smells and half the time they don't even work.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": true,
+        "explicit": false
+      },
+      "id": 189,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "My girlfriend left me because I have a fetish for touching pasta.",
+      "delivery": "I'm feeling cannelloni now. :'(",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 75,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What did the fish say when it swam into the wall?",
+      "delivery": "Dam.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 205,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Christmas",
+      "type": "twopart",
+      "setup": "How will Christmas dinner be different after Brexit?",
+      "delivery": "No Brussels!",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": true,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 251,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Why does Beyonce sing \"to the left, to the left\"?",
+      "delivery": "Because women don't have rights.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": true,
+        "explicit": false
+      },
+      "id": 134,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What does a woman's pussy and a chainsaw have in common?",
+      "delivery": "Miss by a few inches and you're in deep shit.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 157,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "Muslim women are horrible competitors.",
+      "delivery": "No matter what they do, they always get beat.",
+      "flags": {
+        "nsfw": false,
+        "religious": true,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 113,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why did the programmer jump on the table?",
+      "delivery": "Because debug was on his screen.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 214,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "What do you call a kid with no arms and an eyepatch?",
+      "delivery": "Names.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 119,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why is 6 afraid of 7 in hexadecimal Canada?",
+      "delivery": "Because 7 8 9 A?",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 7,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Did you hear about the cheese factory that exploded in France?",
+      "delivery": "There was nothing but de brie.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 65,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why is Linux safe?",
+      "delivery": "Hackers peak through Windows only.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": true,
+      "id": 260,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What time did the man go to the dentist?",
+      "delivery": "Tooth hurt-y.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 125,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "I can't believe I got fired from the calendar factory.",
+      "delivery": "All I did was take a day off.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": true,
+      "id": 303,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "So I made a graph of all my past relationships.",
+      "delivery": "It has an ex axis and a why axis.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 80,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "I asked my wife if I was the only one she's been with.",
+      "delivery": "She said, \"Yes, the others were at least sevens or eights.\"",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 58,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Spooky",
+      "type": "twopart",
+      "setup": "Why didn't the skeleton go for prom?",
+      "delivery": "Because it had nobody.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 183,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Spooky",
+      "type": "twopart",
+      "setup": "What happened to the cannibal who showed up late to Halloween dinner?",
+      "delivery": "They gave him the cold shoulder.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": false,
+      "id": 311,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Why do cows wear bells?",
+      "delivery": "Because their horns don't work!",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 222,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What's the difference between a poorly dressed man on a unicycle and a well dressed man on a bicycle?",
+      "delivery": "Attire.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": true,
+      "id": 267,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What do you call a cop's penis after he's done masturbating?",
+      "delivery": "Pulled pork.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 64,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why do programmers wear glasses?",
+      "delivery": "Because they need to C#",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 50,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Went to the doctors for a prostate exam.\nDuring the exam he said it's not unusual to become aroused or even ejaculate.",
+      "delivery": "But still, I wish he hadn't.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 83,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What is the least spoken language in the world?",
+      "delivery": "Sign language.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 76,
+      "safe": true,
+      "lang": "en"
+    }
+  ]
+}
